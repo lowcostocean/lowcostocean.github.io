@@ -1,0 +1,323 @@
+:root {
+  --whoi-navy: #002b49;
+  --whoi-blue: #00507a;
+  --text: #1c1c1c;
+  --muted: #5a5a5a;
+  --border: #e2e2e2;
+  --bg: #ffffff;
+  --bg-alt: #f5f7f8;
+  --max-width: 860px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+a {
+  color: var(--whoi-blue);
+}
+
+/* Header */
+.site-header {
+  position: relative;
+  background: var(--whoi-navy);
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* The banner logos sit on white plates: the WHOI and Schmidt wordmarks are
+   both dark-on-transparent and would vanish against the navy. */
+.logo {
+  height: 48px;
+  width: auto;
+  background: #fff;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* Funder logos get their own row so the title keeps the full 860px to itself. */
+.header-funders {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+}
+
+.funder-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #b7cbd8;
+  margin-right: 0.15rem;
+}
+
+/* A fixed plate height keeps the two marks looking even despite very
+   different aspect ratios (Schmidt is a wide wordmark, ONR a round seal). */
+.logo-plate {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  padding: 0 0.75rem;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.logo-plate img {
+  height: auto;
+  max-height: 38px;
+  width: auto;
+}
+
+@media (max-width: 640px) {
+  /* Give the label its own line so both plates stay on one row */
+  .header-funders {
+    justify-content: flex-start;
+    margin-top: 1.25rem;
+  }
+  .funder-label {
+    flex: 1 0 100%;
+    margin: 0 0 0.1rem;
+  }
+}
+
+.eyebrow {
+  margin: 0 0 0.25rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #b7cbd8;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+
+.dates {
+  margin: 0.4rem 0 0;
+  color: #d7e4ec;
+}
+
+/* Nav */
+.site-nav {
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+}
+
+.site-nav .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.site-nav a {
+  color: var(--whoi-navy);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main sections */
+main {
+  padding: 2.5rem 1.5rem 1rem;
+}
+
+section {
+  margin-bottom: 2.75rem;
+  scroll-margin-top: 4rem;
+}
+
+h2 {
+  color: var(--whoi-navy);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.4rem;
+  font-size: 1.3rem;
+}
+
+h3 {
+  margin-top: 0;
+  color: var(--whoi-navy);
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin: 1rem 0;
+}
+
+.card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.15rem;
+}
+
+.card-dates {
+  font-weight: 600;
+  color: var(--whoi-blue);
+  margin: 0 0 0.4rem;
+  font-size: 0.9rem;
+}
+
+.card p:last-child {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Theme list */
+.theme-list {
+  columns: 2;
+  column-gap: 2rem;
+  padding-left: 1.2rem;
+}
+
+@media (max-width: 640px) {
+  .theme-list { columns: 1; }
+}
+
+/* Button */
+.button {
+  display: inline-block;
+  background: var(--whoi-navy);
+  color: #fff;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.button:hover {
+  background: var(--whoi-blue);
+}
+
+/* Secondary note, e.g. the foreign-visitor step under Registration */
+.note {
+  background: var(--bg-alt);
+  border-left: 3px solid var(--whoi-blue);
+  border-radius: 0 4px 4px 0;
+  padding: 0.75rem 1rem;
+  font-size: 0.92rem;
+  margin-top: 1.25rem;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Funder logos */
+.funder-logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.funder-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.funder-logo img {
+  height: 68px;
+  width: auto;
+  max-width: 100%;
+}
+
+/* The Schmidt wordmark is wide and light while the ONR seal is a dense round mark,
+   so they need different heights to carry the same visual weight. */
+.funder-logo img[src$=".svg"] {
+  height: 46px;
+}
+
+@media (max-width: 640px) {
+  .funder-logos { gap: 1.75rem; }
+}
+
+/* On wide screens the 860px content column leaves real empty margin either
+   side of the banner, so the funder logos move out there and flank the title
+   instead of taking up a row of their own. Below 1200px the margins are too
+   narrow to hold a plate without colliding with the title, so the stacked
+   row above is used instead. */
+@media (min-width: 1240px) {
+  .header-funders {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Wide enough to sit just outside the 860px content column, rather than
+       pinned to the viewport edges where it would drift far from the title. */
+    width: min(1180px, 100% - 2rem);
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    /* Both funder marks stack together in the right margin, leaving the left
+       margin clear so the WHOI logo still reads as the host. */
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    pointer-events: none;
+  }
+
+  /* "Supported by" has no room to read cleanly out in the margin; the
+     Funders section below carries the acknowledgment in words. */
+  .header-funders .funder-label {
+    display: none;
+  }
+
+  /* Equal widths keep the vertical stack a tidy block instead of a ragged edge */
+  .header-funders .logo-plate {
+    min-width: 148px;
+    pointer-events: auto;
+  }
+}
