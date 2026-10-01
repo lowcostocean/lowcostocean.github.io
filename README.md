@@ -30,8 +30,8 @@ the maintainer's SSH key.
 - `assets/img/schmidt-sciences-logo.svg`, `assets/img/onr-logo.png` — funder logos, used twice:
   stacked in the banner's right margin at ≥1240px wide (they fall back to a row under the title
   on narrower screens) and again at full size in the Funders section
-- `agenda/` — latest agenda PDF, linked directly from the Agenda section rather than transcribed
-  into HTML, so it can be swapped out as new drafts are released
+- `agenda/` — the current working-draft agenda PDF, linked directly from the Agenda section rather
+  than transcribed into HTML, so it can be swapped out as new drafts are released
 
 All internal links are **relative** (`assets/…`, `agenda/…`) with no hardcoded `github.io` URLs,
 so the site works unchanged at a root URL, at a repo path, or under a custom domain. Keep it that way.
@@ -51,8 +51,9 @@ so the site works unchanged at a root URL, at a repo path, or under a custom dom
 
 ## Updating the agenda
 
-Drop the new PDF into `agenda/` and update the `href` in the Agenda section of `index.html`
-to point to it — or just overwrite the existing filename to avoid touching the HTML at all.
+Drop the new PDF into `agenda/`, update the `href` in the Agenda section of `index.html` to point
+to it, and `git rm` the old version so only one draft is published. The page presents the agenda
+as a **working draft**; keep that framing until the program is final.
 
 ## Registration links
 
