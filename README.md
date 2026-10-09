@@ -4,7 +4,7 @@
 
 Public website for the Workshop on Low-Cost Ocean Instrumentation, hosted at Woods Hole
 Oceanographic Institution, October 19–22, 2026 (optional hands-on development session
-October 23 & 26–28, 2026).
+October 23 & 26–27, 2026).
 
 Plain static HTML/CSS — no build step, no framework, no dependencies. Meant to be easy to
 hand-edit as details (speakers, agenda, logistics) firm up.
