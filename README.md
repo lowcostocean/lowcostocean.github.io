@@ -22,8 +22,15 @@ the maintainer's SSH key.
 
 ## Structure
 
-- `index.html` — the whole site: one page, anchor-linked sections
+- `index.html` — the main page, anchor-linked sections
   (Overview · Dates & Venue · Registration · Agenda · Workshop Themes · Funders · Contact)
+- `getting-here.html` — directions, parking, and maps. It repeats the header, nav, and footer
+  from `index.html` (no templating), with its nav links pointing back to `index.html#…`, so
+  **edit the header/nav/footer in both files**
+- `assets/img/quissett-campus-map.jpg`, `route-falmouth-to-david-center.jpg`,
+  `bikeway-to-campus-path.jpg` — maps on the Getting Here page (the two route maps are Google
+  Maps screenshots; keep the Google watermark)
+- `logistics/` — campus map and Shining Sea Bikeway map PDFs, linked from the Getting Here page
 - `assets/css/style.css` — all styling; the palette and content width are CSS custom properties
   at the top of the file
 - `assets/img/whoi-logo.png` — WHOI logo (banner)
@@ -33,7 +40,7 @@ the maintainer's SSH key.
 - `agenda/` — the current working-draft agenda PDF, linked directly from the Agenda section rather
   than transcribed into HTML, so it can be swapped out as new drafts are released
 
-All internal links are **relative** (`assets/…`, `agenda/…`) with no hardcoded `github.io` URLs,
+All internal links are **relative** (`assets/…`, `agenda/…`, `logistics/…`) with no hardcoded `github.io` URLs,
 so the site works unchanged at a root URL, at a repo path, or under a custom domain. Keep it that way.
 
 ### Layout notes worth knowing before editing CSS

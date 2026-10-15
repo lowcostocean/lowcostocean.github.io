@@ -147,6 +147,10 @@ a {
   text-decoration: underline;
 }
 
+.site-nav a[aria-current="page"] {
+  font-weight: 600;
+}
+
 /* Main sections */
 main {
   padding: 2.5rem 1.5rem 1rem;
@@ -241,6 +245,25 @@ h3 {
   padding: 0.75rem 1rem;
   font-size: 0.92rem;
   margin-top: 1.25rem;
+}
+
+/* Maps on the Getting Here page; each image links to its full-size file */
+.map {
+  margin: 1.25rem 0 1.75rem;
+}
+
+.map img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.map figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--muted);
 }
 
 /* Footer */
