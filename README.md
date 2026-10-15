@@ -53,6 +53,9 @@ so the site works unchanged at a root URL, at a repo path, or under a custom dom
   dark-on-transparent and disappear against the navy header. The plates are a fixed height with
   independently sized images — the Schmidt wordmark is wide and light while the ONR seal is a dense
   round mark, so at equal heights Schmidt looks shrunken.
+- Both pages load `assets/css/style.css?v=N`. Bump `N` in both HTML files whenever `style.css`
+  changes; GitHub Pages lets browsers cache CSS for 10 minutes, so otherwise returning visitors
+  can get new HTML with old styles.
 - Reusable classes: `.button` (navy CTA, used by Agenda and Registration), `.note` (light panel
   with a blue left border), `.card`, `.logo-plate`.
 
